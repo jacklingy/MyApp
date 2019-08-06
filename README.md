@@ -11,5 +11,7 @@
 #### 8.主界面还没有开始做
 
 ### Screenshots
-![](Screenshots/Screenshot_2019-08-06-19-21-17-087_com.ncu.myappl.jpg=200×)
+![](Screenshots/Screenshot_2019-08-06-19-21-17-087_com.ncu.myappl.jpg)
+![](Screenshots/Screenshot_2019-08-06-19-21-30-629_com.ncu.myappl.jpg)
+![](Screenshots/Screenshot_2019-08-06-19-21-30-629_com.ncu.myappl.jpg)
 
