@@ -10,3 +10,6 @@
 #### 7.用于测试调试的一些Toast信息没有去掉
 #### 8.主界面还没有开始做
 
+### Screenshots
+![](Screenshots/Screenshot_2019-08-06-19-21-17-087_com.ncu.myappl.jpg)
+
