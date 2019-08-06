@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Edit_profile">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/edit_name"
+
+        android:layout_marginRight="10dp"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingTop="20dp"
+        android:layout_below="@+id/edit_name"
+        android:id="@+id/hint"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="用户号限时开放修改" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="保存"
+        android:textSize="20dp"
+        android:id="@+id/edit_button"
+        android:textColor="@color/colorWhite"
+        android:background="@android:color/holo_green_dark"
+        android:layout_below="@id/hint"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp" />
+
+</RelativeLayout>

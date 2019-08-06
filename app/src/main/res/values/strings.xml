@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Test_3</string>
+    <string name="url">http://jackling.cf</string>
+    <string name="updateurl">http://jackling.cf/latest.apk</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="updatename">http://jackling.cf/android/updatename.php</string>
+    <string name="updateaccountnum">http://jackling.cf/android/updateaccountnum.php</string>
+    <string name="getinfo">http://jackling.cf/android/getinfo.php</string>
+
+
+</resources>
