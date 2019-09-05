@@ -40,9 +40,9 @@ public class Edit_account extends AppCompatActivity {
                 user.setAccount_num(account_num);
                 MyApplication myApplication = (MyApplication) getApplication();
                 user.setAccount(myApplication.getAccount());
-                Toast.makeText(Edit_account.this, "要更改的用户名是：" + user.getAccount() +
+       /*         Toast.makeText(Edit_account.this, "要更改的用户名是：" + user.getAccount() +
                         "改为：" + user.getAccount_num(), Toast.LENGTH_LONG).show();
-
+*/
                 //Volley存入数据库
                 RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
                 String url = getResources().getString(R.string.updateaccountnum) + "?account=" + user.getAccount()

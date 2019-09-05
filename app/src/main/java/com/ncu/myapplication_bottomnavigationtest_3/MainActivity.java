@@ -1,6 +1,7 @@
 package com.ncu.myapplication_bottomnavigationtest_3;
 
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         //  String mode=sharedPreferences.getString("mode","");
 
         int switch_stat = sharedPreferences.getInt("switch", 0);
-        Toast.makeText(this, "the value of switch is : " + switch_stat, Toast.LENGTH_LONG).show();
+      //  Toast.makeText(this, "the value of switch is : " + switch_stat, Toast.LENGTH_LONG).show();
 
         if (switch_stat == 0) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
@@ -110,5 +111,13 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 }
             };
+    @Override
+    public void onBackPressed() {
+        Intent home = new Intent(Intent.ACTION_MAIN);
+        home.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        home.addCategory(Intent.CATEGORY_HOME);
+        startActivity(home);
+
+    }
 
 }

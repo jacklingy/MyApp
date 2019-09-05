@@ -38,72 +38,84 @@ public class Activity_register extends AppCompatActivity {
                 button.setClickable(false);
                 button.setText("注册中...");
 
+                try {
+                    wait(1000);
+
+                }catch (Exception e){
+
+                }
+                button.setClickable(true);
+                button.setText("注册");
                 EditText et_account = findViewById(R.id.account_reg);
                 EditText et_password = findViewById(R.id.password_reg);
 
                 String account = et_account.getText().toString();
                 String password = et_password.getText().toString();
+                if (account.length()<6){
+                    Toast.makeText(Activity_register.this,"请输入6位以上账号！",Toast.LENGTH_LONG).show();
+
+                }else {
 
 
-                final TextView mTextView = (TextView) findViewById(R.id.text);
+                    final TextView mTextView = (TextView) findViewById(R.id.text);
 // ...
 
 
 // Instantiate the RequestQueue.
-                RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
-                String url = getResources().getString(R.string.url) + "/register.php?account=" + account + "&password=" + password;
+                    RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
+                    String url = getResources().getString(R.string.url) + "/register.php?account=" + account + "&password=" + password;
 
 // Request a string response from the provided URL.
-                StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
-                        new Response.Listener<String>() {
-                            @Override
-                            public void onResponse(String response) {
-                                if (response.contains("1")) {
-                                    //注册成功！
-                                    Toast.makeText(getApplicationContext(), "注册成功！马上带您去登录！", Toast.LENGTH_SHORT).show();
-                                    //跳转到下一个页面
-                                    //不跳转
+                    StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
+                            new Response.Listener<String>() {
+                                @Override
+                                public void onResponse(String response) {
+                                    if (response.contains("1")) {
+                                        //注册成功！
+                                        Toast.makeText(getApplicationContext(), "注册成功！马上带您去登录！", Toast.LENGTH_SHORT).show();
+                                        //跳转到下一个页面
+                                        //不跳转
 //
 //                                    Intent intent = new Intent(Activity_register.this, MainActivity.class);
 //                                    startActivity(intent);
 
-                                    Timer timer = new Timer();
-                                    TimerTask timerTask = new TimerTask() {
-                                        @Override
-                                        public void run() {
+                                        Timer timer = new Timer();
+                                        TimerTask timerTask = new TimerTask() {
+                                            @Override
+                                            public void run() {
 //                                            button.setClickable(true);
 //                                            button.setText("登录");
-                                            // button.setBackgroundColor(Color.argb(0,200,200,200));
-                                            button.setClickable(true);
-                                            button.setText("注册");
-                                            finish();
-                                        }
-                                    };
-                                    timer.schedule(timerTask, 1500);
+                                                // button.setBackgroundColor(Color.argb(0,200,200,200));
+                                                button.setClickable(true);
+                                                button.setText("注册");
+                                                finish();
+                                            }
+                                        };
+                                        timer.schedule(timerTask, 1500);
 
 
+                                    }
+                                    if (response.contains("0")) {
+                                        //登录失败！
+                                        Toast.makeText(getApplicationContext(), "注册失败，请重试！", Toast.LENGTH_SHORT).show();
+
+                                    }
+                                    // Display the first 500 characters of the response string.
+                                    //  mTextView.setText("Response is: "+ response.substring(0,8));
                                 }
-                                if (response.contains("0")) {
-                                    //登录失败！
-                                    Toast.makeText(getApplicationContext(), "注册失败，请重试！", Toast.LENGTH_SHORT).show();
-
-                                }
-                                // Display the first 500 characters of the response string.
-                                //  mTextView.setText("Response is: "+ response.substring(0,8));
-                            }
-                        }, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        //网络连接失败
-                        mTextView.setText("网路连接失败！");
-                    }
-                });
+                            }, new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            //网络连接失败
+                            mTextView.setText("网路连接失败！");
+                        }
+                    });
 
 // Add the request to the RequestQueue.
-                queue.add(stringRequest);
+                    queue.add(stringRequest);
 
 
-            }
+                }   }//click
         });
 
 

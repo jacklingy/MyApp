@@ -88,7 +88,7 @@ public class MyFragment extends Fragment {
         layout_login_pane.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity(), "Login pane clicked!", Toast.LENGTH_LONG).show();
+            //    Toast.makeText(getActivity(), "Login pane clicked!", Toast.LENGTH_LONG).show();
 //                layout_login_pane.setVisibility(View.GONE);
 //                layout_signed_pane.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(getActivity(), Activity_login.class);
@@ -120,12 +120,12 @@ public class MyFragment extends Fragment {
 
             layout_login_pane.setVisibility(View.GONE);
             layout_signed_pane.setVisibility(View.VISIBLE);
-            Toast.makeText(getActivity(), "登录状态为11111111111", Toast.LENGTH_LONG).show();
+        //    Toast.makeText(getActivity(), "登录状态为11111111111", Toast.LENGTH_LONG).show();
 
         } else {
             layout_login_pane.setVisibility(View.VISIBLE);
             layout_signed_pane.setVisibility(View.GONE);
-            Toast.makeText(getActivity(), "登录状态为00000000000", Toast.LENGTH_LONG).show();
+         //   Toast.makeText(getActivity(), "登录状态为00000000000", Toast.LENGTH_LONG).show();
 
         }
         final Users user = new Users();
@@ -147,8 +147,8 @@ public class MyFragment extends Fragment {
                             String account_num = strArr[1];
                             user.setName(name);
                             user.setAccount_num(account_num);
-                            Toast.makeText(getActivity().getApplicationContext(), "name:" +
-                                    user.getName() + "num: " + user.getAccount_num(), Toast.LENGTH_SHORT).show();
+                          //  Toast.makeText(getActivity().getApplicationContext(), "name:" +
+                           //         user.getName() + "num: " + user.getAccount_num(), Toast.LENGTH_SHORT).show();
                             username.setText(user.getName());
                             accountnum.setText(user.getAccount_num());
 

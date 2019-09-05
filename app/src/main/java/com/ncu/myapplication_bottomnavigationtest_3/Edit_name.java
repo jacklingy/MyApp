@@ -39,9 +39,9 @@ public class Edit_name extends AppCompatActivity {
                 user.setName(savedName);
                 MyApplication myApplication = (MyApplication) getApplication();
                 user.setAccount(myApplication.getAccount());
-                Toast.makeText(Edit_name.this, "要更改的用户名是：" + user.getAccount() +
+          /*      Toast.makeText(Edit_name.this, "要更改的用户名是：" + user.getAccount() +
                         "改为：" + user.getName(), Toast.LENGTH_LONG).show();
-
+*/
                 //Volley存入数据库
                 RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
                 String url = getResources().getString(R.string.updatename) + "?account=" + user.getAccount()

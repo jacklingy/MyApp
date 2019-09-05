@@ -84,8 +84,10 @@ public class Activity_edit extends AppCompatActivity {
                             String account_num = strArr[1];
                             user.setName(name);
                             user.setAccount_num(account_num);
-                            Toast.makeText(getApplicationContext(), "name:" +
+                         /*   Toast.makeText(getApplicationContext(), "name:" +
                                     user.getName() + "num: " + user.getAccount_num(), Toast.LENGTH_SHORT).show();
+
+                          */
                             username.setText(user.getName());
                             accountnum.setText(user.getAccount_num());
 
